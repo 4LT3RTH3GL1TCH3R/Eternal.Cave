@@ -1,0 +1,74 @@
+/* Basic Page Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background-color: #121212;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    top: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+/* Sections Styling */
+section {
+    margin-top: 60px;
+    text-align: center;
+    display: none;
+}
+
+section h1, section h2 {
+    margin-bottom: 10px;
+}
+
+/* Canvas Styling (background) */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Custom Cursor Styling */
+.cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    border: 3px solid white;
+    pointer-events: none;
+    transition: transform 0.1s ease-in-out;
+}
+
+/* Pulsating Circle on Click */
+.cursor.pulsate {
+    animation: pulsate 0.5s infinite alternate;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
